@@ -1,0 +1,113 @@
+name: cursor_clone_coding
+description: "A new Flutter project."
+
+
+publish_to: 'none' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+
+
+
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  
+  
+  cupertino_icons: ^1.0.8
+  
+  
+  flutter_riverpod: ^2.5.1
+  hooks_riverpod: ^2.5.1
+  flutter_hooks: ^0.20.5
+  
+  
+  go_router: ^13.2.1
+  
+  
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  google_fonts: ^6.2.1
+  flutter_feather_icons: ^2.0.0+1
+  video_player: ^2.8.2
+  video_player_web: ^2.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  
+  
+  
+  
+  
+  flutter_lints: ^5.0.0
+  
+  
+  build_runner: ^2.4.8
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+
+
+
+
+
+flutter:
+
+  assets:
+    - assets/videos/
+    - assets/images/
+    - assets/fonts/
+  
+  
+  uses-material-design: true
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
