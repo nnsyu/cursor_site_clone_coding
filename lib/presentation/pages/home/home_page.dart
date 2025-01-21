@@ -60,15 +60,8 @@ class HomePage extends HookConsumerWidget {
                 controller: scrollController,
                 child: Column(
                   children: [
-                    SizedBox(
-                      // color: Colors.blueGrey,
-                      width: double.infinity,
-                      height: 5000,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 1000.0),
-                        child: Text('Hello'),
-                      ),
-                    ),
+                    AppGaps.v96,
+                    _buildGradientSection(context),
                   ],
                 ),
               ),
@@ -196,6 +189,7 @@ class HomePage extends HookConsumerWidget {
             Row(
               children: [
                 AppDarkButton(
+                  focusColor: Colors.white,
                   child: Icon(
                     FeatherIcons.user,
                     color: AppColors.white,
@@ -270,6 +264,7 @@ class HomePage extends HookConsumerWidget {
       useEffect(() {
         videoController.value =
             VideoPlayerController.asset('assets/videos/logo-black.mp4')
+              ..setVolume(0)
               ..initialize().then((_) {
                 videoController.value?.setPlaybackSpeed(2.0);
                 print('비디오 초기화 완료');
@@ -329,5 +324,38 @@ class HomePage extends HookConsumerWidget {
         ),
       );
     });
+  }
+
+  Widget _buildGradientSection(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return Container(
+      clipBehavior: Clip.hardEdge,
+      width: double.infinity,
+      height: 687,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/gradient.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Text(
+            'The AI Code Editor',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: screenWidth * 0.0927,
+              fontFamily: GoogleFonts.hankenGrotesk().fontFamily,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
